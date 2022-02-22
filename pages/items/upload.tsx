@@ -27,6 +27,14 @@ const Upload: NextPage = () => {
       </div>
 
       <div className="my-5">
+        <label htmlFor="name" className="text-sm mb-1 block font-medium text-gray-500">Name</label>
+        <div className="rounded-md relative flex items-center shadow-sm">
+          <input id="name" type="text" placeholder="이름을 입력해주세요." className="py-2 px-4 border border-transparent w-full border-gray-300 rounded-md shadow-sm pl-7 placeholder-gray-400 focus:outline-none focus:ring-orange-400 focus:border-orange-500" />
+        </div>
+      </div>
+
+
+      <div className="my-5">
         <label htmlFor="price" className="text-sm mb-1 block font-medium text-gray-500">Price</label>
         <div className="rounded-md relative flex items-center shadow-sm">
           <div className="absolute pointer-events-none left-0 pl-3 flex items-center justify-center">
