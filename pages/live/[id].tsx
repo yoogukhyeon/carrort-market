@@ -1,11 +1,10 @@
 import type {NextPage} from 'next'
-import type { NextPage } from "next";
 
 const LiveDetail: NextPage = () => {
     return(
         <div className="py-10  space-y-4 px-4">
             <div className="w-full rounded-md shadow-sm bg-slate-300 aspect-video" />
-            <h3 className="text-gray-800 font-bold text-2xl mt-2">Let's try potatos</h3>
+            <h3 className="text-gray-800 font-bold text-2xl mt-2">Let&apos;s try potatos</h3>
 
         <div className='py-10 pb-16 px-4 space-y-4 h-[50vh] overflow-y-scroll'>
             <div className="flex items-start space-x-2">

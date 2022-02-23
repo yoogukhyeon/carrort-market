@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
-
+import Layout from "../../component/layout";
+import FloatingButton from "../../component/floating-button";
 const Community: NextPage = () => {
   return (
+    <Layout hasTabBar title="Community">
     <div className="py-16 px-4 space-y-8">
       {[1,2,3,4,5].map((_,i) => (
              <div key={i} className="flex flex-col items-start cursor-pointer">
@@ -51,24 +53,28 @@ const Community: NextPage = () => {
              </div>
            </div>
       ))}
-   
-      <button className="fixed bottom-24 right-5 hover:bg-orange-500 cursor-pointer transition-color bg-orange-400 rounded-full p-4 shadow-xl text-white">
+
+
+
+      <FloatingButton href="/community/write">
         <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-          ></path>
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+            ></path>
         </svg>
-      </button>
+      </FloatingButton>
+
     </div>
+  </Layout>
   );
 };
 

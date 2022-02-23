@@ -1,11 +1,28 @@
 import type { NextPage } from "next";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import Layout from "../../component/layout";
+import TextArea from "../../component/textarea";
+import Button from "../../component/button";
+
+interface WriteForm {
+    question: string;
+  }
 
 const Write: NextPage = () => {
+    const [loading , setLoading] = useState(false)
+    const { register, handleSubmit } = useForm<WriteForm>();
     return (
-        <form className="px-4 py-10">
-            <textarea className="mt-1 shadow-sm w-full focus:ring-orange-500 focus:border-orange-500 rounded-md border-gray-300" id="content" rows={4} placeholder="질문을 입력해주세요." />
-            <button className='mt-2 bg-orange-500 w-full hover:bg-orange-600 text-white py-2 px-4 border border-transparent rounded-md shadow-sm font-medium text-sm focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none'>Save</button>
-        </form>
+        <Layout canGoBack>
+            <form className="px-4 py-10 pt-6">
+            <TextArea
+                register={register("question", { required: true, minLength: 5 })}
+                required
+                placeholder="Ask a question!"
+            />
+               <Button text={loading ? "Loading..." : "Submit"} />
+            </form>
+        </Layout>
     )
 }
 

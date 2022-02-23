@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
-
+import Layout from "../../component/layout";
 const loved: NextPage = () => {
     return (
+      <Layout title="관심상품" hasTabBar>
         <div className="flex flex-col space-y-5 py-10">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <div key={i} className="flex px-4 border-b pb-4 cursor-pointer justify-between">
@@ -57,6 +58,7 @@ const loved: NextPage = () => {
           </div>
         ))}
       </div>
+    </Layout> 
     )
 }
 

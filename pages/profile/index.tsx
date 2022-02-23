@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
-
+import Layout from "../../component/layout";
 const Profile: NextPage = () => {
   return (
-    <div className="py-10 px-4">
+    <Layout hasTabBar title="Profile">
+    <div className="py-14 px-4">
       <div className="flex items-center space-x-4">
         <div className="w-16 h-16 bg-slate-500 rounded-full" />
         <div className="flex flex-col">
@@ -135,6 +136,7 @@ const Profile: NextPage = () => {
         </div>
       </div>
     </div>
+    </Layout>
   );
 };
 
