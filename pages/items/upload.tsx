@@ -18,7 +18,7 @@ const Upload: NextPage = () => {
   const [loading , setLoading] = useState(false)
   return (
     <Layout hasTabBar canGoBack>
-       <form className="p-4 space-y-4">
+       <form className="p-4 space-y-4 pt-10">
     <div className="px-4 py-4">
       <div>
         <div className="w-full text-gray-600 cursor-pointer hover:border-orange-500 transition-colors hover:text-orange-500 flex items-center justify-center border-2 border-dashed border-gray-300 py-6 h-48 rounded-md">

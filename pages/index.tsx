@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Layout from "../component/layout";
 import FloatingButton from "../component/floating-button"
+
 const Home: NextPage = () => {
   return (
     <Layout title="Home" hasTabBar>
